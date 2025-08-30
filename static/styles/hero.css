@@ -39,16 +39,16 @@
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 5; /* ensure hero content sits above following sections */
     max-width: 600px;
     margin-left: 5%;
-    margin-top: -18vh;
+    margin-top: -6vh; /* reduced negative offset to prevent overlap */
     color: #ffffff;
     text-align: left;
 }
 
 .hero-title-up {
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 60px;
 }
 
@@ -86,7 +86,7 @@
 
 /* Album promotion section */
 .album-promotion {
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     align-items: flex-start;
     gap: 25px;
@@ -139,7 +139,7 @@
     border: none;
     border-radius: 20px;
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -164,7 +164,7 @@
     border: 2px solid white;
     border-radius: 20px;
     text-decoration: none;
-    font-family: Arial, sans-serif;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -243,7 +243,7 @@
     }
     .hero-content {
         margin-left: 0;
-        margin-top: -3vh;
+    margin-top: -1vh;
         max-width: 100%;
         text-align: center;
     }
@@ -290,4 +290,10 @@
         text-align: center;
         justify-content: center;
     }
+}
+
+/* Ensure about section doesn't float above hero */
+.about-section {
+    position: relative;
+    z-index: 1;
 }
