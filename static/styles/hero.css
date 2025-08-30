@@ -1,3 +1,10 @@
+.album-out-now {
+    color: #b0b0b0;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+}
 .album-promotion-desktop {
     display: flex;
 }
