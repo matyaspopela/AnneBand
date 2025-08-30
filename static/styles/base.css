@@ -1,0 +1,13 @@
+/* Base styles for Anne Band Website */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Metal Mania', cursive;
+    background-color: #1a1a1a;
+    color: white;
+}

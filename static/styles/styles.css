@@ -1,0 +1,159 @@
+/* Anne Band Website Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Metal Mania', cursive;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+header {
+    background-color: #0F0606;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-buttons a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    font-family: 'Metal Mania', cursive;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-buttons a:hover {
+    border-color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-buttons a:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icons a {
+        font-size: 20px;
+    }
+    
+    .logo-container {
+        margin: 0 20px;
+    }
+    
+    .logo {
+        height: 50px;
+    }
+    
+    .nav-buttons {
+        gap: 15px;
+    }
+    
+    .nav-buttons a {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-container {
+        order: -1;
+        margin: 0 0 15px 0;
+    }
+    
+    .social-icons,
+    .nav-buttons {
+        justify-content: center;
+    }
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
