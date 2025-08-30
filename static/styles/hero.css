@@ -15,7 +15,7 @@
 /* Hero section styles for Anne Band Website */
 
 .hero-section {
-    background-image: url('../../../assets/graphics/index_photo.png');
+    background-image: url('/assets/graphics/index_photo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -235,9 +235,15 @@
     }
 }
 
+@media (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
 @media (max-width: 576px) {
     .hero-section {
-        background-image: url('../../../assets/graphics/index_mobile.png');
+        background-image: url('/assets/graphics/index_mobile.png');
         min-height: 70vh;
         text-align: center;
     }
