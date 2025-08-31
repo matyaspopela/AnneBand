@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Metal Mania', cursive;
+    font-family: 'Special Elite', cursive;
     background-color: #1a1a1a;
     color: white;
 }
@@ -28,67 +28,58 @@ header {
     display: flex;
     gap: 20px;
     align-items: center;
+    margin: 0 auto;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
 
-.social-icons a {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+.shows-info {
+    margin-bottom: 24px;
+    width: 100%;
 }
 
-.social-icons a:hover {
-    color: #ff6b6b;
-    transform: scale(1.1);
+.shows-date, .shows-location, .shows-title, .shows-festival, .shows-tag {
+    margin: 6px 0;
+    font-family: 'Special Elite', cursive;
 }
 
-.logo-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin: 0 40px;
+.shows-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 12px 0;
 }
 
-.logo {
-    height: 60px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.05);
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.nav-buttons a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    border-radius: 25px;
-    font-family: 'Metal Mania', cursive;
-    font-size: 18px;
-    transition: all 0.3s ease;
+.shows-tag {
+    display: inline-block;
+    background: #1db954;
+    color: #fff;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 0.9rem;
+    margin-top: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.nav-buttons a:hover {
-    border-color: #ff6b6b;
-    background-color: rgba(255, 107, 107, 0.1);
-    transform: translateY(-2px);
+.get-tickets-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #1db954;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+    font-family: 'Special Elite', cursive;
 }
 
-.nav-buttons a:active {
-    transform: translateY(0);
+.get-tickets-button:hover {
+    background-color: #1ed760;
+    transform: translateY(-2px) scale(1.04);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     header {
         padding: 10px 15px;
@@ -119,6 +110,14 @@ header {
     .nav-buttons a {
         padding: 8px 15px;
         font-size: 16px;
+    }
+    
+    .shows-card {
+        padding: 18px 8px;
+        max-width: 95vw;
+    }
+    .shows-title {
+        font-size: 1.3rem;
     }
 }
 

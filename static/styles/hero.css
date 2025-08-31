@@ -157,31 +157,6 @@
     transform: translateY(-2px);
 }
 
-.more-button {
-    background: transparent;
-    color: white;
-    padding: 8px 16px;
-    border: 2px solid white;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: 'Rubik', Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-
-.more-button:hover {
-    background-color: white;
-    color: black;
-    transform: translateY(-2px);
-}
-
 /* Hero background now handled in HTML with <picture> for GitHub Pages compatibility */
 .hero-section {
     min-height: 100vh;
@@ -247,21 +222,34 @@
     }
     
     .album-title {
-        font-size: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.1;
+        margin-bottom: 4px;
     }
     
     .album-out-now {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        margin-bottom: 2px;
+    }
+    
+    .album-info {
+        height: 100px;
+        gap: 6px;
     }
     
     .album-buttons {
-        gap: 12px;
+        gap: 6px;
+        flex-direction: column;
+        width: 100%;
     }
     
-    .spotify-button,
-    .more-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+    .spotify-button {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+        justify-content: center;
     }
 }
 
@@ -328,29 +316,26 @@
         margin: 0 auto;
         align-items: center;
         justify-content: center;
-        gap: 20px;
     }
     .album-cover {
-        width: 80px;
-        height: 80px;
+        width: 123px;
+        height: 123px;
     }
     .album-info {
         text-align: left;
-        gap: 12px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
     .album-title {
         font-size: 1.8rem;
+        padding-bottom: -25px;
     }
     .album-buttons {
         flex-direction: column;
-        gap: 10px;
         width: 100%;
     }
-    .spotify-button,
-    .more-button {
+    .spotify-button {
         padding: 8px 16px;
         font-size: 0.8rem;
         width: 100%;

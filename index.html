@@ -7,13 +7,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Styles -->
     <link rel="stylesheet" href="static/styles/base.css">
     <link rel="stylesheet" href="static/styles/header.css">
     <link rel="stylesheet" href="static/styles/hero.css">
+    <link rel="stylesheet" href="static/styles/shows.css">
         <style>
             html {
                 scroll-behavior: smooth;
@@ -50,7 +51,6 @@
                     <h2 class="album-title">Opponent</h2>
                     <div class="album-buttons">
                         <a href="#" class="spotify-button"><i class="fab fa-spotify"></i> Open Spotify</a>
-                        <a href="#" class="more-button">More</a>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,6 @@
                 <h2 class="album-title">Opponent</h2>
                 <div class="album-buttons">
                     <a href="#" class="spotify-button"><i class="fab fa-spotify"></i> Open Spotify</a>
-                    <a href="#" class="more-button">More</a>
                 </div>
             </div>
         </div>
@@ -86,6 +85,60 @@
             </div>
         </div>
     </section>
+
+    <section id="shows" class="shows-section">
+        <div class="shows-section-bg"></div>
+        <div class="shows-cards-container" id="shows-cards-container">
+            <!-- Default: Show cards -->
+            <div class="shows-card main-card" id="main-show-card">
+                <div class="shows-info">
+                    <div class="shows-date">September 15, 2025</div>
+                    <div class="shows-location">Prague, Czech Republic</div>
+                    <h2 class="shows-title">Anne Live</h2>
+                    <div class="shows-festival">Rock Festival</div>
+                    <div class="shows-tag">Festival</div>
+                </div>
+                <div class="shows-button">
+                    <a href="#" class="get-tickets-button">Get Tickets</a>
+                </div>
+            </div>
+            <div class="shows-card book-card" id="book-card">
+                <div class="shows-info">
+                    <h2 class="shows-title">Want us to show up?</h2>
+                </div>
+                <div class="shows-button">
+                    <a href="#book" class="book-us-button">Book Us</a>
+                </div>
+            </div>
+            <!-- No shows planned card (hidden by default) -->
+            <div class="shows-card no-shows-card" id="no-shows-card" style="display:none;">
+                <div class="shows-info">
+                    <h2 class="shows-title">No shows planned currently :(</h2>
+                </div>
+                <div class="shows-button">
+                    <a href="#book" class="book-us-button">Book Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    // Toggle between shows and no-shows card
+    function setNoShowsMode(enabled) {
+        const mainShowCard = document.getElementById('main-show-card');
+        const bookCard = document.getElementById('book-card');
+        const noShowsCard = document.getElementById('no-shows-card');
+        if (enabled) {
+            mainShowCard.style.display = 'none';
+            bookCard.style.display = 'none';
+            noShowsCard.style.display = '';
+        } else {
+            mainShowCard.style.display = '';
+            bookCard.style.display = '';
+            noShowsCard.style.display = 'none';
+        }
+    }
+    // Example usage: setNoShowsMode(true) to show the no-shows card
+    </script>
 
     <script src="static/javascript/carousel.js"></script>
 
