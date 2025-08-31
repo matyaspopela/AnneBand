@@ -24,7 +24,9 @@ html, body {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    background: url('/assets/graphics/photo_concert.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     filter: none;
     opacity: 1;
     z-index: 0;

@@ -65,5 +65,5 @@ window.addEventListener('DOMContentLoaded', function() {
     onScroll();
 
     // Toggle to show the 'no shows planned' card
-    setNoShowsMode(true);
+    setNoShowsMode(false);
 });
