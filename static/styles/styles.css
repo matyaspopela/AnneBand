@@ -80,6 +80,51 @@ header {
     transform: translateY(-2px) scale(1.04);
 }
 
+/* Fade-in animation for sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section, .about-container, .album-promotion, .site-footer {
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(0.4,0,0.2,1) forwards;
+    animation-delay: 0.2s;
+}
+
+section.visible, .about-container.visible, .album-promotion.visible, .site-footer.visible {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+/* Animate hero title */
+.hero-title-up, .hero-title-up span {
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(0.4,0,0.2,1) forwards;
+    animation-delay: 0.3s;
+}
+.hero-title-up.visible, .hero-title-up.visible span {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+/* Animate album cover */
+.album-cover {
+    opacity: 0;
+    animation: fadeInUp 1.2s cubic-bezier(0.4,0,0.2,1) forwards;
+    animation-delay: 0.5s;
+}
+.album-cover.visible {
+    opacity: 1;
+    animation-play-state: running;
+}
+
 @media (max-width: 768px) {
     header {
         padding: 10px 15px;

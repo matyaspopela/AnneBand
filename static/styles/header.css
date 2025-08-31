@@ -61,25 +61,46 @@ header {
     align-items: center;
     flex: 1;
     justify-content: flex-end;
+    border: none;
+    box-shadow: none;
 }
 
 .nav-buttons a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    border: 2px solid transparent;
-    border-radius: 25px;
+    border: none;
+    border-radius: 0;
     font-family: Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    background: none;
+    box-shadow: none;
+    position: relative;
+}
+
+.nav-buttons a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ff6b6b;
+    transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.nav-buttons a:hover::after {
+    width: 100%;
 }
 
 .nav-buttons a:hover {
-    border-color: #ff6b6b;
-    background-color: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+    background: none;
     transform: translateY(-2px);
 }
 

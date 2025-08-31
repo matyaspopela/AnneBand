@@ -67,3 +67,17 @@ window.addEventListener('DOMContentLoaded', function() {
     // Toggle to show the 'no shows planned' card
     setNoShowsMode(false);
 });
+
+// Fade-in animation for sections and elements
+function animateOnScroll() {
+    var elements = document.querySelectorAll('section, .about-container, .album-promotion, .site-footer, .hero-title-up, .hero-title-up span, .album-cover');
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    elements.forEach(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < windowHeight * 0.9) {
+            el.classList.add('visible');
+        }
+    });
+}
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('DOMContentLoaded', animateOnScroll);
