@@ -1,0 +1,155 @@
+body {
+    font-family: 'Special Elite', cursive;
+    background: #0f0606;
+    color: #fff;
+
+    body {
+        background: #0f0606;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .book-bg {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+    /* background image is set in HTML, not CSS */
+        filter: blur(8px) brightness(0.7);
+        opacity: 1;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        position: relative;
+        z-index: 2;
+    }
+
+    .booking-card {
+        background: rgba(15, 6, 6, 0.92);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        border-radius: 24px;
+        padding: 3.5rem 3rem 2.5rem 3rem;
+        max-width: 600px;
+        width: 100%;
+        margin: 2.5rem 0;
+        color: #fff;
+        font-family: 'Special Elite', monospace;
+        z-index: 2;
+        position: relative;
+        backdrop-filter: blur(2px);
+        border: 1.5px solid rgba(255,255,255,0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .booking-form label {
+        display: block;
+        margin-top: 1.2rem;
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+    }
+
+    .booking-form input,
+    .booking-form textarea {
+        width: 100%;
+        padding: 0.9rem 1.2rem;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 1.2rem;
+        font-size: 1.08rem;
+        font-family: inherit;
+        background: rgba(255,255,255,0.10);
+        color: #fff;
+        outline: none;
+    }
+
+    .booking-form textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    .booking-form button {
+        width: 100%;
+        padding: 1.1rem 0;
+        background: #e94f37;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.15rem;
+        font-family: inherit;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition: background 0.2s;
+    }
+
+    .booking-form button:hover {
+        background: #b8321a;
+    }
+
+    .book-banner {
+        text-align: center;
+        font-size: 2.1rem;
+        font-family: 'Special Elite', monospace;
+        color: #fff;
+        margin: 2.5rem 0 1.5rem 0;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        z-index: 2;
+        position: relative;
+    }
+
+    header {
+        background: transparent;
+        color: #fff;
+        text-align: center;
+        font-family: 'Special Elite', monospace;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        z-index: 2;
+        position: relative;
+    }
+
+    footer {
+        text-align: center;
+        color: #fff;
+        font-size: 1rem;
+        margin: 2rem 0 1rem 0;
+        z-index: 2;
+        position: relative;
+    }
+
+    @media (max-width: 700px) {
+        .booking-card {
+            padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+            max-width: 98vw;
+        }
+        .book-banner {
+            font-size: 1.3rem;
+            margin: 1.2rem 0 1rem 0;
+        }
+    }
+
+@media (max-width: 600px) {
+    .booking-card {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+    header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+    .book-banner {
+        font-size: 1.1rem;
+        padding: 18px 0 0 0;
+    }
+}
+}

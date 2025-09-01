@@ -1,3 +1,27 @@
+/* Force neutral style for show card buttons */
+.shows-card .book-us-button,
+.shows-card .get-tickets-button {
+    background-color: #fff !important;
+    color: #181818 !important;
+    border: 2px solid #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    border-radius: 6px;
+    margin-top: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.shows-card .book-us-button:hover,
+.shows-card .get-tickets-button:hover {
+    background-color: #f5f5f5 !important;
+    color: #181818 !important;
+    border-color: #bdbdbd !important;
+    transform: translateY(-2px) scale(1.04);
+}
 /* Prevent horizontal scroll on body and html */
 html, body {
     overflow-x: hidden;
@@ -30,7 +54,7 @@ html, body {
     filter: none;
     opacity: 1;
     z-index: 0;
-    transition: filter 1.3s cubic-bezier(0.4,0,0.2,1), opacity 1.3s cubic-bezier(0.4,0,0.2,1);
+    transition: filter 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.7s cubic-bezier(0.4,0,0.2,1);
 }
 
 .shows-card {
@@ -58,7 +82,7 @@ html, body {
 }
 
 .shows-date, .shows-festival, .shows-tag {
-    color: #b0b0b0;
+    color: #444;
     font-size: 1rem;
 }
 
@@ -79,8 +103,8 @@ html, body {
 .book-us-button {
     display: inline-block;
     padding: 14px 32px;
-    background-color: #111;
-    color: #fff;
+    background-color: #ffffffe0;
+    color: #181818;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
@@ -88,14 +112,15 @@ html, body {
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     margin-top: 14px;
     font-family: 'Special Elite', cursive;
-    border: 2px solid #fff;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
 .get-tickets-button:hover,
 .book-us-button:hover {
-    background-color: #fff;
-    color: #111;
-    border-color: #111;
+    background-color: #f5f5f5;
+    color: #181818;
+    border-color: #bdbdbd;
     transform: translateY(-2px) scale(1.04);
 }
 

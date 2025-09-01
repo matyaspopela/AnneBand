@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnneBand Book</title>
+    <link rel="stylesheet" href="static/styles/book.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="book-bg" style="background: url('assets/book_picture.png') center/cover no-repeat; filter: blur(8px) brightness(0.7); position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100vw; height: 100vh; z-index: 0;"></div>
+    <header>
+        <a href="index.html" class="return-btn" style="position:absolute;left:2vw;top:2vw;background:rgba(15,6,6,0.85);color:#fff;padding:0.7em 1.3em;border-radius:12px;text-decoration:none;font-family:'Special Elite',monospace;font-size:1.1rem;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,0.18);transition:background 0.2s;">&larr; Return</a>
+    </header>
+    <div class="book-banner">
+        Book Anne for your event or concert!
+    </div>
+    <main>
+        <div class="booking-card">
+            <form action="https://formspree.io/f/xgvlzzgb" method="POST" class="booking-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message for us:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <label for="date">Concert Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 AnneBand
+    </footer>
+</body>
+</html>
