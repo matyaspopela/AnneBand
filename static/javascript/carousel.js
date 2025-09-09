@@ -25,46 +25,32 @@ function switchText() {
 
 intervalId = setInterval(switchText, 150);
 
-// Animation for shows section
+// Animation for shows section - New unified card design
 window.addEventListener('DOMContentLoaded', function() {
     var showsSection = document.querySelector('.shows-section');
-    var showsBg = document.querySelector('.shows-section-bg');
-    var showsCards = document.querySelectorAll('.shows-card');
-    if (!showsSection || !showsBg || !showsCards.length) return;
-    var blurTimeout = null;
-    function setCardsVisible(visible) {
-        showsCards.forEach(function(card) {
-            if (visible) {
-                card.style.opacity = '';
-                card.style.transform = '';
-            } else {
-                card.style.opacity = 0;
-                card.style.transform = 'translateY(40px) scale(0.98)';
-            }
-        });
-    }
+    var showsBgImage = document.querySelector('.shows-bg-image');
+    var unifiedCard = document.querySelector('.shows-card-unified');
+    
+    if (!showsSection || !showsBgImage || !unifiedCard) return;
+    
     function onScroll() {
         var rect = showsSection.getBoundingClientRect();
         var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        if (rect.top < windowHeight * 0.8 && rect.bottom > windowHeight * 0.2) {
+        
+        // Trigger animation when section is 70% visible
+        if (rect.top < windowHeight * 0.7 && rect.bottom > windowHeight * 0.3) {
             showsSection.classList.add('active');
-            showsBg.classList.remove('blur');
-            setCardsVisible(true);
-            if (blurTimeout) clearTimeout(blurTimeout);
-            blurTimeout = setTimeout(function() {
-                showsBg.classList.add('blur');
-            }, 1200); // Wait for card fade-in before blurring
+            unifiedCard.classList.add('visible');
         } else {
             showsSection.classList.remove('active');
-            showsBg.classList.remove('blur');
-            setCardsVisible(false);
-            if (blurTimeout) clearTimeout(blurTimeout);
+            unifiedCard.classList.remove('visible');
         }
     }
+    
     window.addEventListener('scroll', onScroll);
-    onScroll();
-
-    // Toggle to show the 'no shows planned' card
+    onScroll(); // Initial check
+    
+    // Initialize with shows mode (false = show mode, true = no shows mode)
     setNoShowsMode(false);
 });
 
