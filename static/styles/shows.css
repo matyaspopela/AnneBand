@@ -129,7 +129,7 @@
 
 .show-tag {
     background: #0f0606;
-    color: white;
+    color: rgb(222, 220, 220);
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -217,7 +217,7 @@
 
 .primary-button {
     background: #0f0606;
-    color: white;
+    color: rgb(217, 217, 217);
     border: 2px solid #0f0606;
 }
 
