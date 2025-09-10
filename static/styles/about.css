@@ -91,26 +91,99 @@ body {
 
 .about-buttons {
     display: flex;
-    gap: 18px;
-    margin-top: 24px;
+    gap: 20px;
+    margin-top: 32px;
+    flex-wrap: wrap;
 }
 
 .about-btn {
-    border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
-    padding: 12px 28px;
+    position: relative;
+    padding: 16px 32px;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 4px;
+    border-radius: 12px;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+    letter-spacing: 0.5px;
+    font-family: 'Special Elite', cursive;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    overflow: hidden;
 }
 
-.about-btn:hover {
-    background: #fff;
-    color: #0f0606;
+.about-btn:first-child {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.about-btn:first-child:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #ff7979 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+}
+
+.about-btn:first-child:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+}
+
+.about-btn:first-child:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.about-btn:first-child:hover:before {
+    left: 100%;
+}
+
+.about-btn:last-child {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.about-btn:last-child:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.about-btn:last-child:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.08);
+}
+
+.about-btn:last-child:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.about-btn:last-child:hover:before {
+    width: 300px;
+    height: 300px;
 }
 
 @media (max-width: 900px) {
@@ -123,6 +196,20 @@ body {
     }
     .about-content {
         padding: 32px 18px 28px 18px;
+    }
+    .about-buttons {
+        gap: 16px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-btn {
+        min-width: 200px;
     }
 }
 
@@ -138,10 +225,13 @@ body {
     }
     .about-buttons {
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
+        margin-top: 28px;
     }
     .about-btn {
         width: 100%;
         text-align: center;
+        min-width: auto;
+        padding: 14px 24px;
     }
 }
