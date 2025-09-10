@@ -255,6 +255,31 @@ body {
     outline: none;
 }
 
+/* Remove default red styling for untouched required fields */
+.input-wrapper input:invalid:not(:focus):not(:touched),
+.textarea-wrapper textarea:invalid:not(:focus):not(:touched),
+.select-wrapper select:invalid:not(:focus):not(:touched) {
+    border-color: var(--border-color);
+    box-shadow: none;
+}
+
+/* Only show validation styling after user interaction */
+.input-wrapper input:invalid:focus,
+.input-wrapper input:invalid.touched,
+.textarea-wrapper textarea:invalid:focus,
+.textarea-wrapper textarea:invalid.touched,
+.select-wrapper select:invalid:focus,
+.select-wrapper select:invalid.touched {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* Adjust padding for date and time inputs since they don't have custom icons */
+input[type="date"],
+input[type="time"] {
+    padding: 18px 18px 18px 18px !important;
+}
+
 .input-wrapper input:focus,
 .textarea-wrapper textarea:focus,
 .select-wrapper select:focus {
@@ -278,13 +303,113 @@ body {
 .input-wrapper input:focus + .floating-label,
 .input-wrapper input:not(:placeholder-shown) + .floating-label,
 .textarea-wrapper textarea:focus + .floating-label,
-.textarea-wrapper textarea:not(:placeholder-shown) + .floating-label,
-.select-wrapper select:focus + .floating-label,
-.select-wrapper select:not([value=""]) + .floating-label {
+.textarea-wrapper textarea:not(:placeholder-shown) + .floating-label {
     top: 0;
     font-size: 0.85rem;
     color: var(--accent-color);
     font-weight: 500;
+}
+
+/* Specific styling for select elements */
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 16px;
+    padding-right: 50px;
+    cursor: pointer;
+    border: 2px solid var(--border-color) !important;
+}
+
+.select-wrapper select:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1) !important;
+}
+
+.select-wrapper select:invalid:not(:focus):not(.touched) {
+    border-color: var(--border-color) !important;
+    box-shadow: none !important;
+    color: #9ca3af;
+}
+
+.select-wrapper select:valid {
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.select-wrapper select:focus {
+    color: #9ca3af;
+}
+
+.select-wrapper select option:first-child {
+    color: #9ca3af;
+}
+
+.select-wrapper select option:not(:first-child) {
+    color: var(--text-primary);
+}
+
+/* Hide browser default validation messages */
+.select-wrapper select:invalid {
+    box-shadow: none !important;
+}
+
+.select-wrapper select:focus:invalid {
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1) !important;
+}
+
+/* Prevent default browser validation tooltips */
+.select-wrapper select {
+    position: relative;
+}
+
+.select-wrapper select:invalid:not(:focus):not(.touched)::after {
+    display: none !important;
+}
+
+/* Ensure select dropdown appears above floating label */
+.select-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+/* Special floating label behavior for select */
+.select-wrapper .floating-label {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.select-wrapper select:focus + .floating-label,
+.select-wrapper select:valid + .floating-label {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* Hide the Font Awesome icon for select since we're using custom dropdown arrow */
+.select-wrapper .input-icon {
+    display: none;
+}
+
+/* Hide Font Awesome icons for date and time inputs to avoid duplication with browser icons */
+input[type="date"] + .floating-label + .input-highlight + .input-icon,
+input[type="time"] + .floating-label + .input-highlight + .input-icon,
+.input-wrapper:has(input[type="date"]) .input-icon,
+.input-wrapper:has(input[type="time"]) .input-icon {
+    display: none;
+}
+
+/* Alternative approach for older browsers that don't support :has() */
+.input-wrapper input[type="date"] ~ .input-icon,
+.input-wrapper input[type="time"] ~ .input-icon {
+    display: none;
 }
 
 .input-icon {

@@ -12,7 +12,7 @@ let intervalId;
 function switchText() {
     dynamicText.style.animation = 'none';
     dynamicText.offsetHeight; // Trigger reflow
-    dynamicText.style.animation = 'textCarousel 0.1s ease-in-out';
+    dynamicText.style.animation = 'textCarousel 0.14s ease-in-out';
 
     currentIndex++;
     dynamicText.textContent = textOptions[currentIndex];

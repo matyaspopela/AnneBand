@@ -252,7 +252,7 @@ main {
     text-align: center;
 }
 
-h1 {
+h1:not(.about-title) {
     font-size: 3rem;
     margin-bottom: 20px;
     color: #ff6b6b;

@@ -138,20 +138,24 @@
 
                         <div class="input-group">
                             <div class="select-wrapper">
-                                <i class="fas fa-music input-icon"></i>
                                 <select id="eventType" name="eventType" required>
-                                    <option value="">Select Event Type</option>
+                                    <option value="" disabled selected>Select Event Type</option>
                                     <option value="concert">Concert</option>
                                     <option value="festival">Festival</option>
                                     <option value="private">Private Event</option>
-                                    <option value="corporate">Corporate Event</option>
-                                    <option value="wedding">Wedding</option>
                                     <option value="other">Other</option>
                                 </select>
                                 <label for="eventType" class="floating-label">Event Type</label>
                                 <span class="input-highlight"></span>
                             </div>
                         </div>
+
+                        <script>
+                        // Prevent default browser validation messages
+                        document.getElementById('eventType').addEventListener('invalid', function(e) {
+                            e.preventDefault();
+                        });
+                        </script>
 
                         <div class="input-group">
                             <div class="input-wrapper">
@@ -217,14 +221,6 @@
                         <h2 class="step-title">Review Your Booking Request</h2>
                         <div class="review-container" id="reviewContainer">
                             <!-- Review content will be populated by JavaScript -->
-                        </div>
-                        
-                        <div class="terms-agreement">
-                            <label class="checkbox-item">
-                                <input type="checkbox" id="terms" name="terms" required>
-                                <span class="checkmark"></span>
-                                I agree to the <a href="#" class="terms-link">terms and conditions</a>
-                            </label>
                         </div>
                     </div>
 

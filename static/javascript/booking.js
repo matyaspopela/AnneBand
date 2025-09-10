@@ -30,6 +30,11 @@ class BookingForm {
         
         // Select change events
         document.getElementById('eventType').addEventListener('change', this.handleSelectChange);
+        
+        // Prevent browser validation tooltips for select elements
+        document.getElementById('eventType').addEventListener('invalid', (e) => {
+            e.preventDefault();
+        });
     }
     
     setupFloatingLabels() {
@@ -103,6 +108,11 @@ class BookingForm {
         const existingError = field.parentNode.querySelector('.error-message');
         if (existingError) {
             existingError.remove();
+        }
+        
+        // Skip showing error message for select elements to avoid annoying "Please select" text
+        if (field.tagName.toLowerCase() === 'select') {
+            return;
         }
         
         // Add error message

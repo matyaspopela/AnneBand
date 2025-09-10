@@ -72,6 +72,7 @@ body {
 .about-title {
     font-family: 'Rubik Distressed', 'Special Elite', serif;
     font-size: 2.8rem;
+    color: #ffffff !important;
     margin: 0 0 24px 0;
     line-height: 1.1;
 }

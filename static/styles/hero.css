@@ -50,6 +50,8 @@
 .hero-title-up {
     margin-top: 10px;
     margin-bottom: 60px;
+    color: #ffffff !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content h1 {
