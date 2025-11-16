@@ -1,18 +1,18 @@
-/* Modern Booking Page - Professional Form Design */
+/* Modern Booking Page - tuned to match Anne Band site */
 :root {
     --primary-color: #0f0606;
     --secondary-color: #ff6b6b;
-    --accent-color: #4a90e2;
-    --success-color: #27ae60;
-    --text-primary: #2c3e50;
+    --accent-color: #ff6b6b;
+    --success-color: #1db954;
+    --text-primary: #111111;
     --text-secondary: #7f8c8d;
     --text-light: #ffffff;
-    --bg-light: #f8f9fa;
-    --bg-card: rgba(255, 255, 255, 0.95);
-    --border-color: #e9ecef;
-    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
-    --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.2);
+    --bg-light: #0f0606;
+    --bg-card: rgba(12, 5, 5, 0.96);
+    --border-color: rgba(255, 255, 255, 0.18);
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.35);
+    --shadow-medium: 0 12px 30px rgba(0, 0, 0, 0.6);
+    --shadow-heavy: 0 22px 70px rgba(0, 0, 0, 0.85);
 }
 
 * {
@@ -22,9 +22,9 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Special Elite', cursive;
     background: #0f0606;
-    color: var(--text-primary);
+    color: var(--text-light);
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -109,21 +109,24 @@ body {
 .booking-header {
     text-align: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .booking-title {
     font-family: 'Special Elite', cursive;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     color: var(--text-light);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .booking-subtitle {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 40px;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 28px;
     font-weight: 300;
+    max-width: 540px;
+    margin-inline: auto;
 }
 
 /* Progress Indicator */
@@ -134,7 +137,7 @@ body {
 .progress-bar {
     width: 100%;
     height: 4px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.16);
     border-radius: 2px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -142,7 +145,7 @@ body {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--secondary-color), #ffd56b);
     border-radius: 2px;
     width: 25%;
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -188,23 +191,135 @@ body {
 }
 
 /* Form Container */
-.form-container {
-    background: var(--bg-card);
-    border-radius: 20px;
-    padding: 50px;
-    box-shadow: var(--shadow-heavy);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+/* Contact Card */
+.contact-card {
+    background: rgba(10, 4, 4, 0.96);
+    border-radius: 18px;
+    padding: 32px 32px 26px 32px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Form Steps */
-.form-step {
-    display: none;
-    animation: fadeInUp 0.5s ease-out;
+.contact-card-main {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.form-step.active {
-    display: block;
+.contact-heading {
+    font-family: 'Special Elite', cursive;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.contact-lead {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+}
+
+.contact-highlight {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.9rem;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
+.contact-info-block h3 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+}
+
+.contact-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 10px 0 4px 0;
+}
+
+.contact-link {
+    display: inline-block;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #ffd56b;
+    text-decoration: none;
+    font-weight: 500;
+    word-break: break-all;
+    font-size: 0.98rem;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.contact-socials a {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.contact-socials a i {
+    font-size: 1rem;
+    color: #ff6b6b;
+}
+
+.contact-socials a:hover {
+    color: #ff6b6b;
+}
+
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 6px 0 0 0;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 6px;
+}
+
+.contact-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6b6b;
+}
+
+.contact-note {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 6px;
 }
 
 @keyframes fadeInUp {
@@ -682,46 +797,20 @@ input[type="time"] + .floating-label + .input-highlight + .input-icon,
 /* Responsive Design */
 @media (max-width: 768px) {
     .booking-title {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
     
     .booking-subtitle {
-        font-size: 1rem;
+        font-size: 0.98rem;
     }
-    
-    .form-container {
-        padding: 30px 25px;
+
+    .contact-card {
+        padding: 28px 22px 24px 22px;
     }
-    
-    .input-row {
+
+    .contact-info-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .progress-steps {
-        gap: 10px;
-    }
-    
-    .step span {
-        font-size: 0.8rem;
-    }
-    
-    .step i {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .form-navigation {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .btn {
-        width: 100%;
-    }
-    
-    .checkbox-grid {
-        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
 

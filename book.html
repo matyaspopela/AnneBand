@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Anne Band - Professional Booking</title>
+    <title>Contact Anne Band</title>
     <link rel="stylesheet" href="static/styles/book.css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,233 +29,61 @@
         <div class="booking-container">
             <!-- Header Section -->
             <div class="booking-header">
-                <h1 class="booking-title">Book Anne Band</h1>
-                <p class="booking-subtitle">Let's create an unforgettable musical experience together</p>
-                
-                <!-- Progress Indicator -->
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
-                    </div>
-                    <div class="progress-steps">
-                        <div class="step active" data-step="1">
-                            <i class="fas fa-user"></i>
-                            <span>Contact</span>
-                        </div>
-                        <div class="step" data-step="2">
-                            <i class="fas fa-calendar"></i>
-                            <span>Event</span>
-                        </div>
-                        <div class="step" data-step="3">
-                            <i class="fas fa-info-circle"></i>
-                            <span>Details</span>
-                        </div>
-                        <div class="step" data-step="4">
-                            <i class="fas fa-check"></i>
-                            <span>Review</span>
-                        </div>
+                <h1 class="booking-title">Contact & Booking</h1>
+                <p class="booking-subtitle">Get in touch to bring Anne Band to your festival, club night, or private event.</p>
+            </div>
+
+            <!-- Contact Card -->
+            <section class="contact-card">
+                <div class="contact-card-main">
+                    <h2 class="contact-heading">Let’s talk about your event</h2>
+                    <p class="contact-lead">
+                        Anne Band is currently accepting bookings for festivals, clubs, and private events in Prague and across Europe.
+                        Share a few details about your idea and we’ll get back to you as soon as possible.
+                    </p>
+                    <div class="contact-highlight">
+                        Loud guitars, tight rhythm section, and a young alt‑rock energy tailored to your audience.
                     </div>
                 </div>
-            </div>
 
-            <!-- Form Container -->
-            <div class="form-container">
-                <form action="https://formspree.io/f/xgvlzzgb" method="POST" class="booking-form" id="bookingForm">
-                    
-                    <!-- Step 1: Contact Information -->
-                    <div class="form-step active" data-step="1">
-                        <h2 class="step-title">Contact Information</h2>
-                        
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-user input-icon"></i>
-                                <input type="text" id="name" name="name" required>
-                                <label for="name" class="floating-label">Full Name</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
+                <div class="contact-info-grid">
+                    <div class="contact-info-block">
+                        <h3>Booking & Management</h3>
+                        <p class="contact-label">Primary contact</p>
+                        <!-- Replace this email with your real booking email -->
+                        <a href="mailto:anne@gmail.com" class="contact-link">booking@your-email.com</a>
 
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-envelope input-icon"></i>
-                                <input type="email" id="email" name="email" required>
-                                <label for="email" class="floating-label">Email Address</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-phone input-icon"></i>
-                                <input type="tel" id="phone" name="phone">
-                                <label for="phone" class="floating-label">Phone Number (Optional)</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-building input-icon"></i>
-                                <input type="text" id="organization" name="organization">
-                                <label for="organization" class="floating-label">Organization/Venue (Optional)</label>
-                                <span class="input-highlight"></span>
-                            </div>
+                        <p class="contact-label">Socials</p>
+                        <div class="contact-socials">
+                            <a href="https://instagram.com/x.annely" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://tiktok.com/@x.annely" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-tiktok"></i> TikTok
+                            </a>
+                            <a href="https://open.spotify.com/track/238G3XJ5rDii36T9Yxurdk?si=PwpFi68VQg-Tt98Iv1rvjQ" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-spotify"></i> Spotify
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Step 2: Event Details -->
-                    <div class="form-step" data-step="2">
-                        <h2 class="step-title">Event Details</h2>
-                        
-                        <div class="input-row">
-                            <div class="input-group">
-                                <div class="input-wrapper">
-                                    <i class="fas fa-calendar input-icon"></i>
-                                    <input type="date" id="date" name="date" required>
-                                    <label for="date" class="floating-label">Event Date</label>
-                                    <span class="input-highlight"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="input-group">
-                                <div class="input-wrapper">
-                                    <i class="fas fa-clock input-icon"></i>
-                                    <input type="time" id="time" name="time">
-                                    <label for="time" class="floating-label">Preferred Time</label>
-                                    <span class="input-highlight"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-map-marker-alt input-icon"></i>
-                                <input type="text" id="location" name="location" required>
-                                <label for="location" class="floating-label">Event Location</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <div class="select-wrapper">
-                                <select id="eventType" name="eventType" required>
-                                    <option value="" disabled selected>Select Event Type</option>
-                                    <option value="concert">Concert</option>
-                                    <option value="festival">Festival</option>
-                                    <option value="private">Private Event</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <label for="eventType" class="floating-label">Event Type</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
-
-                        <script>
-                        // Prevent default browser validation messages
-                        document.getElementById('eventType').addEventListener('invalid', function(e) {
-                            e.preventDefault();
-                        });
-                        </script>
-
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-users input-icon"></i>
-                                <input type="number" id="expectedAttendees" name="expectedAttendees" min="1">
-                                <label for="expectedAttendees" class="floating-label">Expected Attendees</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
+                    <div class="contact-info-block">
+                        <h3>Helpful details to include</h3>
+                        <ul class="contact-list">
+                            <li>Date and city of your event</li>
+                            <li>Venue type and approximate capacity</li>
+                            <li>Type of show (festival, club, private, support slot…)</li>
+                            <li>Technical setup available on site</li>
+                            <li>Any special requests or schedule notes</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <!-- Step 3: Additional Information -->
-                    <div class="form-step" data-step="3">
-                        <h2 class="step-title">Additional Information</h2>
-                        
-                        <div class="input-group">
-                            <div class="textarea-wrapper">
-                                <i class="fas fa-comment-alt input-icon"></i>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                                <label for="message" class="floating-label">Tell us about your event</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-dollar-sign input-icon"></i>
-                                <input type="text" id="budget" name="budget">
-                                <label for="budget" class="floating-label">Budget Range (Optional)</label>
-                                <span class="input-highlight"></span>
-                            </div>
-                        </div>
-
-                        <div class="checkbox-group">
-                            <h3>Additional Services Needed:</h3>
-                            <div class="checkbox-grid">
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="services" value="sound-equipment">
-                                    <span class="checkmark"></span>
-                                    Sound Equipment
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="services" value="lighting">
-                                    <span class="checkmark"></span>
-                                    Lighting Setup
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="services" value="stage">
-                                    <span class="checkmark"></span>
-                                    Stage Setup
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="services" value="accommodation">
-                                    <span class="checkmark"></span>
-                                    Accommodation
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: Review & Submit -->
-                    <div class="form-step" data-step="4">
-                        <h2 class="step-title">Review Your Booking Request</h2>
-                        <div class="review-container" id="reviewContainer">
-                            <!-- Review content will be populated by JavaScript -->
-                        </div>
-                    </div>
-
-                    <!-- Form Navigation -->
-                    <div class="form-navigation">
-                        <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
-                            <i class="fas fa-arrow-left"></i>
-                            Previous
-                        </button>
-                        <button type="button" class="btn btn-primary" id="nextBtn">
-                            Next
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Booking Request
-                        </button>
-                    </div>
-                </form>
-            </div>
+                <p class="contact-note">
+                    Prefer talking first? Reach out via Instagram DM and we’ll pick things up from there.
+                </p>
+            </section>
         </div>
     </main>
-
-    <!-- Success Message -->
-    <div class="success-overlay" id="successOverlay" style="display: none;">
-        <div class="success-modal">
-            <div class="success-icon">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <h2>Booking Request Sent!</h2>
-            <p>Thank you for your interest in Anne Band. We'll get back to you within 24 hours.</p>
-            <a href="index.html" class="btn btn-primary">Return Home</a>
-        </div>
-    </div>
-
-    <script src="static/javascript/booking.js"></script>
 </body>
 </html>
